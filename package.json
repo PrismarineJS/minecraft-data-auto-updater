@@ -1,0 +1,25 @@
+{
+  "name": "minecraft-data-auto-updater",
+  "version": "1.0.0",
+  "description": "Automatically run minecraft data extractors and create pull request for minecraft-data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrismarineJS/minecraft-data-auto-updater.git"
+  },
+  "keywords": [
+    "minecraft",
+    "data",
+    "auto",
+    "update"
+  ],
+  "author": "Romain Beaumont <romain.rom1@gmail.com> (<romain.rom1@gmail.com>)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrismarineJS/minecraft-data-auto-updater/issues"
+  },
+  "homepage": "https://github.com/PrismarineJS/minecraft-data-auto-updater#readme"
+}
