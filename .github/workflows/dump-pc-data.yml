@@ -144,7 +144,7 @@ jobs:
       runs-on: ubuntu-latest
       needs:
       - minecraft-jar-extractor
-      
+      - dump-burger
       steps:
       - name: Setup Node
         uses: actions/setup-node@v2
