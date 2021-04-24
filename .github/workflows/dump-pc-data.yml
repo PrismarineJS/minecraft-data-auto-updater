@@ -182,7 +182,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.PAT_PASSWORD }}
           repository: PrismarineJS/minecraft-data
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.0.9
