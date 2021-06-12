@@ -20,7 +20,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v1.4.3
         with:
-          java-version: 1.8
+          java-version: '16'
       - name: Clone McDataExtracting
         run: git clone https://github.com/PrismarineJS/McDataExtracting code
       - name: get gradlew
@@ -58,7 +58,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v1.4.3
         with:
-          java-version: 1.8
+          java-version: '16'
       - name: Setup Python
         uses: actions/setup-python@v2.2.2
       - name: Clone Repos
