@@ -83,6 +83,7 @@ jobs:
             mkdir out && mkdir code && cd code
             git clone https://github.com/PrismarineJS/minecraft-jar-extractor/
             cd minecraft-jar-extractor
+            git switch -f dont_rely_on_api
       - name: Make language.json
         run: |
             cd code/minecraft-jar-extractor
