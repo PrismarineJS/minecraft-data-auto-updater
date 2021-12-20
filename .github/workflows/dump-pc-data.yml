@@ -78,6 +78,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '15'
+      - name: Setup Java
+        uses: actions/setup-java@v1.4.3
+        with:
+          java-version: '17'
       - name: Clone Repos
         run: | # git clone https://github.com/PrismarineJS/minecraft-jar-extractor
             mkdir out && mkdir code && cd code
