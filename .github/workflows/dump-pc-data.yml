@@ -124,6 +124,7 @@ jobs:
             mkdir code && cd code
             git clone https://github.com/PrismarineJS/minecraft-jar-extractor/
             cd minecraft-jar-extractor
+            git switch -f u9g-patch-1
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.0.9
         with:
