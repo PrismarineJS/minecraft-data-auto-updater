@@ -26,7 +26,7 @@ jobs:
         run: |
             mkdir code && cd code
             git clone https://github.com/Pokechu22/Burger
-            git clone https://github.com/PrismarineJS/burger-extractor
+            git clone https://github.com/u9g/burger-extractor
       - name: Run Burger
         run: |
             cd code/Burger
@@ -35,6 +35,7 @@ jobs:
       - name: Run Burger-Extractor
         run: |
             cd code/burger-extractor
+            git switch -f patch-1
             npm i
             cd src
             node . ../burger.json ${{ github.event.inputs.minecraft-version }}
