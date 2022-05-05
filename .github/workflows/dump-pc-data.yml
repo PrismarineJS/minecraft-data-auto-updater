@@ -25,24 +25,15 @@ jobs:
       - name: Clone Repos
         run: |
             mkdir code && cd code
-            git clone https://github.com/Pokechu22/Burger
-            git clone https://github.com/PrismarineJS/burger-extractor
-      - name: Run Burger
-        run: |
-            cd code/Burger
-            pip install jawa six
-            python3 munch.py --download ${{ github.event.inputs.minecraft-version }} --output ../burger.json
-      - name: Run Burger-Extractor
-        run: |
-            cd code/burger-extractor
-            npm i
-            cd src
-            node . ../burger.json ${{ github.event.inputs.minecraft-version }}
+            git clone https://github.com/u9g/minecraft-data-generator
+            git switch -f update-for-1.18
+            ./gradlew runClient
+            ls -R code/minecraft-data-generator
       - name: Save to Artifact
         uses: actions/upload-artifact@v2
         with:
           name: data
-          path: code/burger-extractor/out/
+          path: code/minecraft-data-generator/run/minecraft-data
           
     turbo-invention: # adds data to items.json from burger
       runs-on: ubuntu-latest
