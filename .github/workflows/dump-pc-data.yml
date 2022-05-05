@@ -25,18 +25,15 @@ jobs:
       - name: Clone Repos
         run: |
             mkdir code && cd code
-            sudo apt update
-            sudo apt-get install ffmpeg xvfb -y
-            git clone https://github.com/u9g/minecraft-data-generator .
-            git switch -f update-for-1.18
+            git clone https://github.com/u9g/minecraft-data-generator-server .
             chmod +x gradlew
-            xvfb-run -s "-ac -screen 0 1280x1024x24" ./gradlew runClient
+            ./gradlew runServer
             ls -R code/minecraft-data-generator
       - name: Save to Artifact
         uses: actions/upload-artifact@v2
         with:
           name: data
-          path: code/minecraft-data-generator/run/minecraft-data
+          path: code/minecraft-data-generator-server/run/minecraft-data
     make-pr:
       runs-on: ubuntu-latest
       needs: 
