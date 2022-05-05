@@ -48,7 +48,7 @@ jobs:
         uses: actions/download-artifact@v2.0.9
         with:
           name: data
-          path: data/pc/${{ github.event.inputs.minecraft-version }}/
+          path: data/pc/
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
