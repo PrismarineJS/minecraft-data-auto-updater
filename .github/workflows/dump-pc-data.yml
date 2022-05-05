@@ -25,7 +25,7 @@ jobs:
       - name: Clone Repos
         run: |
             mkdir code && cd code
-            git clone https://github.com/u9g/minecraft-data-generator
+            git clone https://github.com/u9g/minecraft-data-generator .
             git switch -f update-for-1.18
             ./gradlew runClient
             ls -R code/minecraft-data-generator
