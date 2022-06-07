@@ -45,6 +45,8 @@ jobs:
         with:
           token: ${{ secrets.PAT_PASSWORD }}
           repository: PrismarineJS/minecraft-data
+      - name: List files
+        run: ls -R .
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.0.9
         with:
