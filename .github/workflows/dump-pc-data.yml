@@ -48,7 +48,7 @@ jobs:
       - name: List files
         run: ls -R .
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v2.0.9
+        uses: actions/download-artifact@v4.1.7
         with:
           name: data
           path: data/pc/
